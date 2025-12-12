@@ -25,7 +25,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { actionSwitchOrganization } from "@/app/actions/switch-organization"
+import { switchOrganizationAction } from "@/app/actions/switch-organization"
 
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 
@@ -52,7 +52,7 @@ export function OrganizationSwitcher({
   const handleSwitch = (orgId: string) => {
     setOpen(false)
     startTransition(async () => {
-      await actionSwitchOrganization(orgId)
+      await switchOrganizationAction(orgId)
     })
   }
 
