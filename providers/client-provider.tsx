@@ -3,12 +3,15 @@
 import React from "react"
 // import "@auth0/universal-components-react/styles"
 import { Auth0ComponentProvider } from "@auth0/universal-components-react/rwa"
+import { useTheme } from "next-themes"
 
 interface ClientProviderProps {
   children: React.ReactNode
 }
 
 export function ClientProvider({ children }: ClientProviderProps) {
+  const {resolvedTheme} = useTheme()
+  
   return (
     <Auth0ComponentProvider
       authDetails={
@@ -18,7 +21,7 @@ export function ClientProvider({ children }: ClientProviderProps) {
         }
       }
       themeSettings={{
-        mode: "light",
+        mode: resolvedTheme === "dark" ? "dark" : "light",
         theme: "default",
       }}
     >

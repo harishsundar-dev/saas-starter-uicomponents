@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@auth0/universal-components-react/tailwind';
+@import '@auth0/universal-components-react/styles';
 
 @config "../tailwind.config.ts";
 
