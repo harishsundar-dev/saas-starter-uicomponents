@@ -28,7 +28,7 @@
 
   --color-border: var(--border);
 
-  --color-ring: oklch(from var(--ring) l c h / 50%);
+  --color-ring: var(--ring);
 
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
@@ -83,19 +83,19 @@
   --color-warning: var(--color-yellow-3);
   --color-warning-foreground: var(--color-yellow-11);
 
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 10px;
-  --radius-xl: 12px;
-  --radius-2xl: 14px;
-  --radius-3xl: 16px;
-  --radius-4xl: 20px;
-  --radius-5xl: 24px;
-  --radius-6xl: 32px;
-  --radius-7xl: 40px;
-  --radius-8xl: 48px;
-  --radius-9xl: 56px;
+  --radius-xs: var(--radius);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
+  --radius-3xl: var(--radius);
+  --radius-4xl: var(--radius);
+  --radius-5xl: var(--radius);
+  --radius-6xl: var(--radius);
+  --radius-7xl: var(--radius);
+  --radius-8xl: var(--radius);
+  --radius-9xl: var(--radius);
 }
 
 :root {
@@ -173,5 +173,11 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  [class*="focus-within:ring-"]:focus-within {
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
   }
 }
