@@ -6,8 +6,6 @@
   --color-card-foreground: oklch(0% 0 0);
   --color-popover: oklch(100% 0 0);
   --color-popover-foreground: oklch(23.93% 0 0);
-  /* --color-primary: oklch(26.1% 0.0079 84.59);
-  --color-primary-foreground: oklch(100% 0 0); */
   --color-secondary: oklch(95.51% 0 0);
   --color-secondary-foreground: oklch(99.11% 0 0);
   --color-muted: oklch(95.51% 0 0);
@@ -18,7 +16,6 @@
   --color-destructive-foreground: oklch(56.26% 0.1824 30.09);
   --color-border: oklch(88.53% 0 0);
   --color-input: oklch(100% 0 0);
-  /* --color-ring: oklch(85.14% 0 0 / 50%); */
 
   /* Bevel Shadows */
   --shadow-bevel-xs:
