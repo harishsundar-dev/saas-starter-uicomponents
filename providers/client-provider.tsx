@@ -11,7 +11,7 @@ interface ClientProviderProps {
 export function ClientProvider({ children }: ClientProviderProps) {
   return (
     <Auth0ComponentProvider
-      mode={"proxy"}
+      mode="proxy"
       proxyConfig={{
         baseUrl: '/'
       }}
