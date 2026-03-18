@@ -11,12 +11,11 @@ interface ClientProviderProps {
 export function ClientProvider({ children }: ClientProviderProps) {
   return (
     <Auth0ComponentProvider
-      authDetails={
-        {
-          authProxyUrl: "/", // Use the auth proxy base (For example, MFA service will add /mfa/authenticators)
-          domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN
-        }
-      }
+      mode="proxy"
+      proxyConfig={{
+        baseUrl: '/'
+      }}
+      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
       themeSettings={{
         mode: "light",
         theme: "default",
